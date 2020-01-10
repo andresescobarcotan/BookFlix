@@ -1,4 +1,4 @@
-package com.bolsadeideas.springboot.diapp;
+package com.bookflix.app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

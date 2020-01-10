@@ -1,4 +1,4 @@
-package com.bolsadeideas.springboot.diapp.model;
+package com.bookflix.model;
 
 
 public class Book {

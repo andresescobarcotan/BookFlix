@@ -1,7 +1,8 @@
-package com.bolsadeideas.springboot.diapp.model;
+package com.bookflix.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
@@ -42,17 +43,18 @@ public class BookService implements IBookService {
 		myListOfBooks.remove(deleted);
 		
 	}
-/*
+
 	@Override
 	public Book updateBook(Book book, Long bookId) {
-		// TODO Auto-generated method stub
-		return null;
+		Book oldBook = this.findBookById(bookId);
+		return book;
 	}
 
 	@Override
 	public Book updateBook(Map<String, String> updates, Long bookId) {
 		// TODO Auto-generated method stub
-		return null;
-	}*/
+		Book recoveredBook = new Book();
+		return recoveredBook;
+	}
 
 }
