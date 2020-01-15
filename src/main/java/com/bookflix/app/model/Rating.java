@@ -1,4 +1,4 @@
-package com.bookflix.model;
+package com.bookflix.app.model;
 
 public class Rating {
 	private long id;

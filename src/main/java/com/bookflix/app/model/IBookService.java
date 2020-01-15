@@ -1,4 +1,4 @@
-package com.bookflix.model;
+package com.bookflix.app.model;
 
 import java.util.List;
 import java.util.Map;

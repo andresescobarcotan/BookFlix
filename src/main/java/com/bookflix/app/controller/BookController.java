@@ -1,4 +1,4 @@
-package com.bookflix.controller;
+package com.bookflix.app.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -13,20 +13,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bookflix.model.Book;
-import com.bookflix.model.BookService;
-import com.bookflix.model.IBookService;
+import com.bookflix.app.model.Book;
+import com.bookflix.app.model.BookService;
+import com.bookflix.app.model.IBookService;
 
 @RestController
-@CrossOrigin(origins = "*")
-@RequestMapping("/books")
+@RequestMapping("/v2/books/")
 public class BookController {
 	@Autowired
 	private IBookService bookService;
 
-	@GetMapping
+	@RequestMapping(method = RequestMethod.GET, produces = "application/json")
 	public List<Book> findAllBooks() {
 	return bookService.findAllBooks();
 	}

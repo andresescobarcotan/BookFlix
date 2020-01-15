@@ -1,18 +1,31 @@
-package com.bookflix.model;
+package com.bookflix.app.model;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.stereotype.Service;
+
+
 
 @Service
 public class BookService implements IBookService {
 	private static final String MISSING_BOOK_COVER = "https://timedotcom.files.wordpress.com/2015/06/521811839-copy.jpg";
 	List<Book> myListOfBooks=new ArrayList<Book>();
+	
+    @PostConstruct
+    void init() {
+        this.myListOfBooks = new ArrayList<>();
+
+        Book john = new Book(0,"El Guardian entre el centeno","Shakespeare","");
+        myListOfBooks.add(john);
+    }
+	
 	@Override
 	public List<Book> findAllBooks() {
-		// TODO Auto-generated method stub
+		System.out.println("List of books have been requested");
 		return this.myListOfBooks;
 	}
 
