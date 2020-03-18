@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bookflix.app.model.Book;
-import com.bookflix.app.model.BookService;
 import com.bookflix.app.model.IBookService;
 
 @RestController
+@CrossOrigin(origins="*")
 @RequestMapping("/v2/books/")
 public class BookController {
 	@Autowired
